@@ -80,24 +80,24 @@ class BinarySearchTree {
 
     while (curr && curr.data !== data) {
       parent = curr;
-      if (curr && curr.data > data) curr = curr.left;
-      if (curr && curr.data < data) curr = curr.right;
+      if (curr.data > data) curr = curr.left;
+      else curr = curr.right;
     }
     if (!curr) return null;
 
     // leaf node case
     if (!curr.left && !curr.right) {
       if (curr === this.rootNode) this.rootNode = null;
-      if (parent && curr === parent.left) parent.left = null;
-      if (parent && curr === parent.right) parent.right = null;
+      else if (curr === parent.left) parent.left = null;
+      else parent.right = null;
     }
 
     // one child case
-    if (!curr.left || !curr.right) {
+    else if (!curr.left || !curr.right) {
       const child = curr.left || curr.right;
       if (curr === this.rootNode) this.rootNode = child;
-      if (parent && curr === parent.left) parent.left = child;
-      if (parent && curr === parent.right) parent.right = child;
+      else if (curr === parent.left) parent.left = child;
+      else parent.right = child;
     }
 
     // two children case
@@ -120,14 +120,14 @@ class BinarySearchTree {
 
   min() {
     let curr = this.rootNode;
-    while (curr.left) curr = curr.left;
-    return curr.data;
+    while (curr && curr.left) curr = curr.left;
+    return curr ? curr.data : null;
   }
 
   max() {
     let curr = this.rootNode;
-    while (curr.right) curr = curr.right;
-    return curr.data;
+    while (curr && curr.right) curr = curr.right;
+    return curr ? curr.data : null;
   }
 }
 
