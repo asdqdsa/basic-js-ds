@@ -1,5 +1,55 @@
+// const { NotImplementedError } = require('../lib/errors');
+// const { ListNode } = require('../extensions/list-node.js');
+
+// /**
+//  * Implement the Queue with a given interface via linked list (use ListNode extension above).
+//  *
+//  * @example
+//  * const queue = new Queue();
+//  *
+//  * queue.enqueue(1); // adds the element to the queue
+//  * queue.enqueue(3); // adds the element to the queue
+//  * queue.dequeue(); // returns the top element from queue and deletes it, returns 1
+//  * queue.getUnderlyingList() // returns { value: 3, next: null }
+//  */
+// class Queue {
+//   getUnderlyingList() {
+//     if (!this.head) throw new Error('Queue is empty!');
+//     return this.head;
+//   }
+
+//   enqueue(value) {
+//     const node = new ListNode(value);
+//     if (!this.head) {
+//       this.head = node;
+//       this.tail = node;
+//     } else {
+//       this.tail.next = node;
+//       this.tail = node;
+//     }
+//   }
+
+//   dequeue() {
+//     if (!this.head) throw new Error('Queue is empty!');
+
+//     const node = this.head;
+//     if (this.head === this.tail) {
+//       this.head = null;
+//       this.tail = null;
+//     } else {
+//       this.head = this.head.next;
+//     }
+
+//     return node.value;
+//   }
+// }
+
+// module.exports = {
+//   Queue,
+// };
+
 const { NotImplementedError } = require('../lib/errors');
-const { ListNode } = require('../extensions/list-node.js');
+// const { ListNode } = require('../extensions/list-node.js');
 
 /**
  * Implement the Queue with a given interface via linked list (use ListNode extension above).
@@ -14,33 +64,18 @@ const { ListNode } = require('../extensions/list-node.js');
  */
 class Queue {
   getUnderlyingList() {
-    if (!this.head) throw new Error('Queue is empty!');
-    return this.head;
+    // Remove line below and write your code here
+    throw new NotImplementedError('Not implemented');
   }
 
-  enqueue(value) {
-    const node = new ListNode(value);
-    if (!this.head) {
-      this.head = node;
-      this.tail = node;
-    } else {
-      this.tail.next = node;
-      this.tail = node;
-    }
+  enqueue(/* value */) {
+    // Remove line below and write your code here
+    throw new NotImplementedError('Not implemented');
   }
 
   dequeue() {
-    if (!this.head) throw new Error('Queue is empty!');
-
-    const node = this.head;
-    if (this.head === this.tail) {
-      this.head = null;
-      this.tail = null;
-    } else {
-      this.head = this.head.next;
-    }
-
-    return node.value;
+    // Remove line below and write your code here
+    throw new NotImplementedError('Not implemented');
   }
 }
 
