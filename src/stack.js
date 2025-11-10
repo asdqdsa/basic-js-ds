@@ -38,7 +38,10 @@ class Stack {
   }
 
   pop() {
-    if (this.size < 1) throw new Error('Stack is empty!');
+    if (this.size < 1) {
+      // throw new Error('Stack is empty!');
+      return;
+    }
     const element = this.list[this.size - 1];
     this.size -= 1;
 
@@ -51,7 +54,10 @@ class Stack {
   }
 
   peek() {
-    if (this.size < 1) throw new Error('Stack is empty!');
+    if (this.size < 1) {
+      return;
+      //  throw new Error('Stack is empty!');
+    }
     return this.list[this.size - 1];
   }
 }
